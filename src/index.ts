@@ -15,3 +15,4 @@ export { Messages } from '@salesforce/core';
 export { errorMessages } from './constants/errorMessages.js';
 export { sfCommandConstants } from './constants/sfCommandConstants.js';
 export { propertyFileContent } from './constants/propertyFileContent.js';
+export { commandConstants } from './constants/commandConstants.js';
