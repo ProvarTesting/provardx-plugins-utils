@@ -1,3 +1,9 @@
-# provardx-plugins-utils
+# @provartesting/provardx-plugins-utils
 
-"provardx utility plugin containing all utility classes and functions needed to support other functionalities."
+[![Version](https://img.shields.io/npm/v/@provartesting/provardx-plugins-utils.svg)](https://npmjs.org/package/@provartesting/provardx-plugins-utils)
+[![Downloads/week](https://img.shields.io/npm/dw/@provartesting/provardx-plugins-utils.svg)](https://npmjs.org/package/@provartesting/provardx-plugins-utils)
+[![License](https://img.shields.io/npm/l/@provartesting/provardx-plugins-utils.svg)](https://github.com/ProvarTesting/provardx-plugins-utils/blob/main/LICENSE.md)
+
+# What is this package for?
+
+This package contains all the shared utility classes and functions used by the other ProvarDX CLI packages.
