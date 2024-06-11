@@ -18,7 +18,7 @@ export type SfProvarCommandResult = {
   success: boolean;
   value?: string;
   testCasePaths?: string[];
-  testCaseExternalIds?: string[];
+  testClassIds?: string[];
   errors?: Error[] | object[];
 };
 
@@ -59,7 +59,7 @@ export function populateResult(
     testCaseExternalIds != null
       ? (result = {
           success: true,
-          testCaseExternalIds: testCaseExternalIds,
+          testClassIds: testCaseExternalIds,
         })
       : '';
   }
