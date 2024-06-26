@@ -17,6 +17,8 @@ import { GenericErrorHandler } from './genericErrorHandler.js';
 export type SfProvarCommandResult = {
   success: boolean;
   value?: string;
+  testCasePaths?: string[];
+  testClassIds?: string[];
   errors?: Error[] | object[];
 };
 
@@ -26,7 +28,9 @@ export function populateResult(
   errorHandler: ErrorHandler | GenericErrorHandler,
   messages: Messages<string>,
   log: Function,
-  value?: string
+  value?: string,
+  testCasePaths?: string[],
+  testCaseExternalIds?: string[]
 ): SfProvarCommandResult {
   let result: SfProvarCommandResult = { success: true };
 
@@ -46,6 +50,19 @@ export function populateResult(
       success: true,
       value: value,
     };
+    testCasePaths != null
+      ? (result = {
+          success: true,
+          testCasePaths: testCasePaths,
+        })
+      : '';
+    testCaseExternalIds != null
+      ? (result = {
+          success: true,
+          testClassIds: testCaseExternalIds,
+        })
+      : '';
   }
+
   return result;
 }
