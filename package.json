@@ -1,5 +1,5 @@
 {
-  "name": "provardx-plugins-utils",
+  "name": "@provartesting/provardx-plugins-utils",
   "description": "provardx utility plugin containing all utility classes and functions needed to support other functionalities.",
   "version": "1.0.0",
   "dependencies": {

@@ -20,7 +20,10 @@ export class ProvarConfig extends Config {
   public constructor() {
     const option = { isGlobal: true, isState: true, filename: 'config.json', stateFolder: '.provardx' };
     const allowedProeprties: ConfigPropertyMeta[] = [];
-    allowedProeprties.push({ key: 'PROVARDX_PROPERTIES_FILE_PATH', description: '' });
+    allowedProeprties.push(
+      { key: 'PROVARDX_PROPERTIES_FILE_PATH', description: '' },
+      { key: 'ACTIVE_PROVAR_MANAGER_ORG', description: '' }
+    );
     ProvarConfig.addAllowedProperties(allowedProeprties);
     super(
       Object.assign(
