@@ -2,7 +2,7 @@ import { SfCommand, Flags } from '@salesforce/sf-plugins-core';
 import { Messages } from '@salesforce/core';
 
 Messages.importMessagesDirectoryFromMetaUrl(import.meta.url);
-const messages = Messages.loadMessages('provardx-plugins-utils', 'hello.world');
+const messages = Messages.loadMessages('@provartesting/provardx-plugins-utils', 'hello.world');
 
 export type HelloWorldResult = {
   name: string;

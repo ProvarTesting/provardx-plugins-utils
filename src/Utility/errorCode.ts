@@ -26,4 +26,6 @@ export type ErrorCode =
   | 'COMPILATION_ERROR'
   | 'SETUP_ERROR'
   | 'TEST_RUN_ERROR'
-  | 'SF_ERROR';
+  | 'SF_ERROR'
+  | 'MISSING_MANAGER_PACKAGE'
+  | 'INVALID_TARGET_ORG';
