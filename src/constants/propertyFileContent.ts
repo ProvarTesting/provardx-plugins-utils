@@ -4,11 +4,7 @@ export const propertyFileContent = {
   resultsPath: '${PROVAR_RESULTS_PATH}',
   smtpPath: '',
   resultsPathDisposition: 'Increment',
-  testOutputLevel: 'BASIC',
-  pluginOutputlevel: 'WARNING',
   stopOnError: false,
-  lightningMode: true,
-  connectionRefreshType: 'Reload',
   metadata: {
     metadataLevel: 'Reuse',
     cachePath: '../.provarCaches',
@@ -21,4 +17,10 @@ export const propertyFileContent = {
     webBrowserDeviceName: 'Full Screen',
   },
   testprojectSecrets: '${PROVAR_TEST_PROJECT_SECRETS}',
+  testplanFeatures: [
+    { name: 'PDF', type: 'OUTPUT', enabled: 'true' },
+    { name: 'PIECHART', type: 'OUTPUT', enabled: 'true' },
+    { name: 'EMAIL', type: 'NOTIFICATION', enabled: 'true' },
+    { name: 'TEST_MANAGER', type: 'REPORTING', enabled: 'true' },
+  ],
 };
