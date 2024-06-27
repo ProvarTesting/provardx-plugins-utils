@@ -53,13 +53,13 @@ export function populateResult(
     testCasePaths != null
       ? (result = {
           success: true,
-          testCasePaths: testCasePaths,
+          testCasePaths: testCasePaths.map((testCasePath) => testCasePath.trim()),
         })
       : '';
     testCaseExternalIds != null
       ? (result = {
           success: true,
-          testClassIds: testCaseExternalIds,
+          testClassIds: testCaseExternalIds.map((testCaseExternalId) => testCaseExternalId.trim()),
         })
       : '';
   }
