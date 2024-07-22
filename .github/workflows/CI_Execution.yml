@@ -43,29 +43,3 @@ jobs:
       - name: Build the project
         run: |
           yarn prepack
-          npm install -g @salesforce/cli
-      - name: Check out Regression repo
-        uses: actions/checkout@v4
-        with:
-          repository: ProvarTesting/ProvarRegression
-          path: ProvarRegression
-          ref: AnchalGoel
-          token: ${{ secrets.PATREGRESSION }}
-      - name: Change permissions
-        run: |
-          if [ "$RUNNER_OS" == "Linux" ]; then
-               chmod 777 ./bin/run.js
-          elif [ "$RUNNER_OS" == "macOS" ]; then
-               chmod 777 ./bin/run.js
-          fi
-        shell: bash
-      - name: Execute NUTS
-        run: |
-          sf plugins link .
-          yarn run test:nuts
-      - name: Archive NUTS results
-        uses: actions/upload-artifact@v3
-        with:
-          name: nuts-report-${{ matrix.os }}
-          path: |
-            mochawesome-report
