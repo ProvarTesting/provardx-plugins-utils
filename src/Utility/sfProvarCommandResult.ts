@@ -14,11 +14,11 @@ import { GenericErrorHandler } from './genericErrorHandler.js';
  *
  */
 
+/* eslint-disable */
 export type SfProvarCommandResult = {
   success: boolean;
   value?: string;
-  testCasePaths?: string[];
-  testClassIds?: string[];
+  testCases?: any[];
   errors?: Error[] | object[];
 };
 
@@ -29,8 +29,7 @@ export function populateResult(
   messages: Messages<string>,
   log: Function,
   value?: string,
-  testCasePaths?: string[],
-  testCaseExternalIds?: string[]
+  testCases?: any[]
 ): SfProvarCommandResult {
   let result: SfProvarCommandResult = { success: true };
 
@@ -50,18 +49,12 @@ export function populateResult(
       success: true,
       value: value,
     };
-    testCasePaths != null
+    testCases != null && testCases.length > 0
       ? (result = {
           success: true,
-          testCasePaths: testCasePaths.map((testCasePath) => testCasePath.trim()),
+          testCases: testCases,
         })
-      : '';
-    testCaseExternalIds != null
-      ? (result = {
-          success: true,
-          testClassIds: testCaseExternalIds.map((testCaseExternalId) => testCaseExternalId.trim()),
-        })
-      : '';
+      : [];
   }
 
   return result;
