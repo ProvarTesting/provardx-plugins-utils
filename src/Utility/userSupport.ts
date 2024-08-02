@@ -15,13 +15,13 @@ export class UserSupport {
 
   public replaceSpecialCharacters(rawProperties: string): string {
     return rawProperties
-      .replace(/\^/g, '^^')
-      .replace(/&/g, '^&')
-      .replace(/</g, '^<')
-      .replace(/>/g, '^>')
-      .replace(/'/g, "^'")
-      .replace(/|/g, '^|')
-      .replace(/\\/g, '^\\')
+      .replaceAll('^', '^^')
+      .replaceAll('&', '^&')
+      .replaceAll('<', '^<')
+      .replaceAll('>', '^>')
+      .replaceAll("'", "^'")
+      .replaceAll('|', '^|')
+      .replaceAll('\\', '^\\')
       .replace(/"/g, '\\"');
   }
 
