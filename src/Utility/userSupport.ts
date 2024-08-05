@@ -21,10 +21,6 @@ export class UserSupport {
       .replaceAll('>', '^>')
       .replaceAll("'", "^'")
       .replaceAll('|', '^|')
-      .replaceAll('{', '^{')
-      .replaceAll('}', '^}')
-      .replaceAll('[', '^[')
-      .replaceAll(']', '^]')
       .replaceAll('\\', '^\\')
       .replace(/"/g, '\\"');
   }
