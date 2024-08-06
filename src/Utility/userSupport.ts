@@ -10,7 +10,7 @@ export class UserSupport {
    */
   /* eslint-disable */
   public prepareRawProperties(rawProperties: string): string {
-    return '"' + this.replaceSpecialCharacters(rawProperties) + '"';
+    return '"' + this.replaceSpecialCharacters(rawProperties).replace(/"/g, '\\"') + '"';
   }
 
   public replaceSpecialCharacters(rawProperties: string): string {
@@ -21,8 +21,7 @@ export class UserSupport {
       .replaceAll('>', '^>')
       .replaceAll("'", "^'")
       .replaceAll('|', '^|')
-      .replaceAll('\\', '^\\')
-      .replace(/"/g, '\\"');
+      .replaceAll('\\', '^\\');
   }
 
   /**
