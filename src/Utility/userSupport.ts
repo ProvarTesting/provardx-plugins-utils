@@ -1,4 +1,5 @@
 import { sfCommandConstants } from '../constants/sfCommandConstants.js';
+import { specialCharReplacements } from '../constants/specialCharacterHandler.js';
 import { ErrorHandler } from './errorHandler.js';
 import { GenericErrorHandler } from './genericErrorHandler.js';
 import { GenericError } from './GenericError.js';
@@ -14,14 +15,12 @@ export class UserSupport {
   }
 
   public replaceSpecialCharacters(rawProperties: string): string {
-    return rawProperties
-      .replaceAll('^', '^^')
-      .replaceAll('&', '^&')
-      .replaceAll('<', '^<')
-      .replaceAll('>', '^>')
-      .replaceAll("'", "^'")
-      .replaceAll('|', '^|')
-      .replaceAll('\\', '^\\');
+    const result = [];
+    for (let i = 0; i < rawProperties.length; i++) {
+      const char = rawProperties[i];
+      result.push(specialCharReplacements[char] || char);
+    }
+    return result.join('');
   }
 
   /**
