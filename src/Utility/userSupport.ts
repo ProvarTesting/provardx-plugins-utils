@@ -14,6 +14,11 @@ export class UserSupport {
     return '"' + this.replaceSpecialCharacters(rawProperties).replace(/"/g, '\\"') + '"';
   }
 
+  /**
+   * JSON library we are using in studio to deserialize this JSON to POJO is Gson and
+   * it automatically handles standard characters and escape sequences except for few,
+   * all other characters that are not explicitly handled will still be processed normally using the library’s default behavior.
+   */
   public replaceSpecialCharacters(rawProperties: string): string {
     const result = [];
     for (let i = 0; i < rawProperties.length; i++) {
