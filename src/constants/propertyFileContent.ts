@@ -5,6 +5,8 @@ export const propertyFileContent = {
   smtpPath: '',
   resultsPathDisposition: 'Increment',
   stopOnError: false,
+  lightningMode: true,
+  connectionRefreshType: 'Reload',
   metadata: {
     metadataLevel: 'Reuse',
     cachePath: '../.provarCaches',
