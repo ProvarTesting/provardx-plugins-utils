@@ -43,6 +43,16 @@ export const propertyFileSchema = {
       type: 'string',
       enum: ['Increment', 'Replace', 'Fail'],
     },
+    testOutputLevel: {
+      description: 'Controls the amount of test output logged to the DX test log.',
+      type: 'string',
+      enum: ['BASIC', 'DETAILED', 'DIAGNOSTIC'],
+    },
+    pluginOutputlevel: {
+      description: 'Controls the amount of plugin output logged to the DX test log.',
+      type: 'string',
+      enum: ['SEVERE', 'WARNING', 'INFO', 'FINE', 'FINER', 'FINEST'],
+    },
     excludeCallable: {
       description:
         'Indicates whether Callable Test Cases should be omitted from execution (true) or included in execution (false)',
