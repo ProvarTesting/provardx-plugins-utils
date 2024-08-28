@@ -1,3 +1,4 @@
+import os from 'os';
 import { sfCommandConstants } from '../constants/sfCommandConstants.js';
 import { specialCharReplacements } from '../constants/specialCharacterHandler.js';
 import { ErrorHandler } from './errorHandler.js';
