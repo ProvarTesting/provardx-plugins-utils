@@ -1,3 +1,4 @@
+import os from 'node:os';
 import { sfCommandConstants } from '../constants/sfCommandConstants.js';
 import { specialCharReplacements } from '../constants/specialCharacterHandler.js';
 import { ErrorHandler } from './errorHandler.js';
@@ -11,7 +12,10 @@ export class UserSupport {
    */
   /* eslint-disable */
   public prepareRawProperties(rawProperties: string): string {
-    return '"' + this.replaceSpecialCharacters(rawProperties).replace(/"/g, '\\"') + '"';
+    if (os.platform() === "win32") {
+      return '"' + this.replaceSpecialCharacters(rawProperties).replace(/"/g, '\\"') + '"';
+    }
+      return '"' + rawProperties.replace(/"/g, '\\"') + '"';
   }
 
   /**
