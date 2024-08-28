@@ -12,10 +12,10 @@ export class UserSupport {
    */
   /* eslint-disable */
   public prepareRawProperties(rawProperties: string): string {
-    if (os.platform() === "linux") {
-      return '"' + rawProperties.replace(/"/g, '\\"') + '"';
+    if (os.platform() === "win32") {
+      return '"' + this.replaceSpecialCharacters(rawProperties).replace(/"/g, '\\"') + '"';
     }
-    return '"' + this.replaceSpecialCharacters(rawProperties).replace(/"/g, '\\"') + '"';
+      return '"' + rawProperties.replace(/"/g, '\\"') + '"';
   }
 
   /**
