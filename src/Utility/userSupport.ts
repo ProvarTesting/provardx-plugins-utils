@@ -11,7 +11,7 @@ export class UserSupport {
    */
   /* eslint-disable */
   public prepareRawProperties(rawProperties: string): string {
-   return '"' + rawProperties.replace(/"/g, '\\"') + '"';
+    return '"' + this.replaceSpecialCharacters(rawProperties).replace(/"/g, '\\"') + '"';
   }
 
   /**
