@@ -4,6 +4,8 @@ export const propertyFileContent = {
   resultsPath: '${PROVAR_RESULTS_PATH}',
   smtpPath: '',
   resultsPathDisposition: 'Increment',
+  testOutputLevel: 'BASIC',
+  pluginOutputlevel: 'WARNING',
   stopOnError: false,
   lightningMode: true,
   connectionRefreshType: 'Reload',
