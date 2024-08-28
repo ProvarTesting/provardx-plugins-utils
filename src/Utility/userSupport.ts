@@ -11,6 +11,9 @@ export class UserSupport {
    */
   /* eslint-disable */
   public prepareRawProperties(rawProperties: string): string {
+    if (os.platform() === "linux") {
+      return '"' + rawProperties.replace(/"/g, '\\"') + '"';
+    }
     return '"' + this.replaceSpecialCharacters(rawProperties).replace(/"/g, '\\"') + '"';
   }
 
