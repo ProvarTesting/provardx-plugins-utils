@@ -21,9 +21,7 @@ export class SFProvarResult {
     flags: any,
     errorHandler: ErrorHandler | GenericErrorHandler,
     messages: Messages<string>,
-    log: Function,
-    value?: string,
-    testCases?: any[]
+    log: Function
   ): SfProvarCommandResult {
     let result: SfProvarCommandResult = { success: true };
 
@@ -38,17 +36,6 @@ export class SFProvarResult {
       };
     } else {
       messages.messages.has('success_message') ? log(messages.getMessage('success_message')) : '';
-      value != null ? log(value) : '';
-      result = {
-        success: true,
-        value: value,
-      };
-      testCases != null && testCases.length > 0
-        ? (result = {
-            success: true,
-            testCases: testCases,
-          })
-        : [];
     }
 
     return result;

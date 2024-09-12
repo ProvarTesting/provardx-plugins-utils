@@ -16,7 +16,7 @@ import { GenericErrorHandler } from './genericErrorHandler.js';
 
 /* eslint-disable */
 export type SfProvarCommandResult = {
-  success?: boolean;
+  success: boolean;
   value?: string;
   testCases?: any[];
   errors?: Error[] | object[];
