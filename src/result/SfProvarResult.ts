@@ -6,9 +6,9 @@
  */
 
 import { Messages } from '@salesforce/core';
-import { ErrorHandler, Error } from './errorHandler.js';
-import { GenericErrorHandler } from './genericErrorHandler.js';
-import { SfProvarCommandResult } from './sfProvarCommandResult.js';
+import { ErrorHandler, Error } from '../Utility/errorHandler.js';
+import { GenericErrorHandler } from '../Utility/genericErrorHandler.js';
+import { SfProvarCommandResult } from '../Utility/sfProvarCommandResult.js';
 
 /* eslint-disable */
 export class SFProvarResult {
