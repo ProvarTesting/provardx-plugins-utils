@@ -17,7 +17,7 @@ export class SFProvarResult {
    *
    */
 
-  public populateResult(
+  public static populateResult(
     flags: any,
     errorHandler: ErrorHandler | GenericErrorHandler,
     messages: Messages<string>,
