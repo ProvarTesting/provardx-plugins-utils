@@ -3,7 +3,7 @@
   "description": "provardx utility plugin containing all utility classes and functions needed to support other functionalities.",
   "version": "1.3.1",
   "dependencies": {
-    "@oclif/core": "^3.26.2",
+    "@oclif/core": "^3.26.6",
     "@salesforce/core": "^7.2.0",
     "@salesforce/sf-plugins-core": "^9.0.1",
     "node-stream-zip": "^1.15.0",
