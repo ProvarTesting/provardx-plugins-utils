@@ -39,3 +39,4 @@ export type ErrorCode =
   | 'TEST_RUN_FINISHED'
   | 'TEST_RUN_FAILED'
   | 'API_REQUEST_ERROR';
+
