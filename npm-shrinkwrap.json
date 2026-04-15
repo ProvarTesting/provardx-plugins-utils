@@ -10,7 +10,7 @@
       "license": "BSD-3-Clause",
       "dependencies": {
         "@oclif/core": "^3.26.2",
-        "@salesforce/core": "^7.2.0",
+        "@salesforce/core": "^7.4.1",
         "@salesforce/sf-plugins-core": "^9.0.1",
         "cli-ux": "^6.0.9",
         "jsonschema": "^1.5.0",
@@ -3120,17 +3120,6 @@
         "pino": "bin.js"
       }
     },
-    "node_modules/@salesforce/cli-plugins-testkit/node_modules/pino-abstract-transport": {
-      "version": "1.2.0",
-      "resolved": "https://registry.npmjs.org/pino-abstract-transport/-/pino-abstract-transport-1.2.0.tgz",
-      "integrity": "sha512-Guhh8EZfPCfH+PMXAb6rKOjGQEoy0xlAIn+irODG5kgfYV+BQ0rGYYWTIel3P5mmyXqkYkPmdIkywsn6QKUR1Q==",
-      "dev": true,
-      "license": "MIT",
-      "dependencies": {
-        "readable-stream": "^4.0.0",
-        "split2": "^4.0.0"
-      }
-    },
     "node_modules/@salesforce/cli-plugins-testkit/node_modules/pino-pretty": {
       "version": "11.3.0",
       "resolved": "https://registry.npmjs.org/pino-pretty/-/pino-pretty-11.3.0.tgz",
@@ -3282,39 +3271,30 @@
         "real-require": "^0.2.0"
       }
     },
-    "node_modules/@salesforce/cli-plugins-testkit/node_modules/ts-retry-promise": {
-      "version": "0.8.1",
-      "resolved": "https://registry.npmjs.org/ts-retry-promise/-/ts-retry-promise-0.8.1.tgz",
-      "integrity": "sha512-+AHPUmAhr5bSRRK5CurE9kNH8gZlEHnCgusZ0zy2bjfatUBDX0h6vGQjiT0YrGwSDwRZmU+bapeX6mj55FOPvg==",
-      "dev": true,
-      "license": "MIT",
-      "engines": {
-        "node": ">=6"
-      }
-    },
     "node_modules/@salesforce/core": {
-      "version": "7.2.0",
-      "resolved": "https://registry.npmjs.org/@salesforce/core/-/core-7.2.0.tgz",
-      "integrity": "sha512-N/9hv7Vdr9sEuob9vo90odcQ7dJPtfOQVIE5R8vFcfaHK3W3ej9EpHsaV55PkaVG+hxRhZ2oOVA3UaVfp/diOw==",
+      "version": "7.4.1",
+      "resolved": "https://registry.npmjs.org/@salesforce/core/-/core-7.4.1.tgz",
+      "integrity": "sha512-ccYs7uL4GYjdOcc44trfRnaz69kG0jU0aoT0qjPkIel8oVOyEoXaoDCG0A+2diqmicDp5uWK0pNs+tdWNj2mcQ==",
       "license": "BSD-3-Clause",
       "dependencies": {
-        "@jsforce/jsforce-node": "^3.1.0",
-        "@salesforce/kit": "^3.1.0",
-        "@salesforce/schemas": "^1.7.0",
+        "@jsforce/jsforce-node": "^3.2.0",
+        "@salesforce/kit": "^3.1.2",
+        "@salesforce/schemas": "^1.9.0",
         "@salesforce/ts-types": "^2.0.9",
-        "ajv": "^8.12.0",
+        "ajv": "^8.15.0",
         "change-case": "^4.1.2",
+        "fast-levenshtein": "^3.0.0",
         "faye": "^1.4.0",
         "form-data": "^4.0.0",
         "js2xmlparser": "^4.0.1",
         "jsonwebtoken": "9.0.2",
         "jszip": "3.10.1",
-        "pino": "^8.19.0",
-        "pino-abstract-transport": "^1.1.0",
+        "pino": "^8.21.0",
+        "pino-abstract-transport": "^1.2.0",
         "pino-pretty": "^10.3.1",
         "proper-lockfile": "^4.1.2",
-        "semver": "^7.6.0",
-        "ts-retry-promise": "^0.7.1"
+        "semver": "^7.6.2",
+        "ts-retry-promise": "^0.8.1"
       },
       "engines": {
         "node": ">=18.0.0"
@@ -3489,9 +3469,10 @@
       "license": "BSD-3-Clause"
     },
     "node_modules/@salesforce/schemas": {
-      "version": "1.7.0",
-      "resolved": "https://registry.npmjs.org/@salesforce/schemas/-/schemas-1.7.0.tgz",
-      "integrity": "sha512-Z0PiCEV55khm0PG+DsnRYCjaDmacNe3HDmsoSm/CSyYvJJm+D5vvkHKN9/PKD/gaRe8XAU836yfamIYFblLINw==",
+      "version": "1.10.3",
+      "resolved": "https://registry.npmjs.org/@salesforce/schemas/-/schemas-1.10.3.tgz",
+      "integrity": "sha512-FKfvtrYTcvTXE9advzS25/DEY9yJhEyLvStm++eQFtnAaX1pe4G3oGHgiQ0q55BM5+0AlCh0+0CVtQv1t4oJRA==",
+      "deprecated": "Schemas for scratch org definition and sfdx-project.json are now part of @salesforce/core package",
       "license": "ISC"
     },
     "node_modules/@salesforce/sf-plugins-core": {
@@ -7469,16 +7450,15 @@
       "version": "3.0.0",
       "resolved": "https://registry.npmjs.org/fast-levenshtein/-/fast-levenshtein-3.0.0.tgz",
       "integrity": "sha512-hKKNajm46uNmTlhHSyZkmToAc56uZJwYq7yrciZjqOxnlfQwERDQJmHPUp7m1m9wx8vgOe8IaCKZ5Kv2k1DdCQ==",
-      "dev": true,
       "license": "MIT",
       "dependencies": {
         "fastest-levenshtein": "^1.0.7"
       }
     },
     "node_modules/fast-redact": {
-      "version": "3.3.0",
-      "resolved": "https://registry.npmjs.org/fast-redact/-/fast-redact-3.3.0.tgz",
-      "integrity": "sha512-6T5V1QK1u4oF+ATxs1lWUmlEk6P2T9HqJG3e2DnHOdVgZy2rFJBoEnrIedcTXlkAHU/zKC+7KETJ+KGGKwxgMQ==",
+      "version": "3.5.0",
+      "resolved": "https://registry.npmjs.org/fast-redact/-/fast-redact-3.5.0.tgz",
+      "integrity": "sha512-dwsoQlS7h9hMeYUq1W++23NDcBLV4KqONnITDV9DjfS3q1SgDGVrBdvvTLUotWtPSD7asWDV9/CmsZPy8Hf70A==",
       "license": "MIT",
       "engines": {
         "node": ">=6"
@@ -7547,7 +7527,6 @@
       "version": "1.0.16",
       "resolved": "https://registry.npmjs.org/fastest-levenshtein/-/fastest-levenshtein-1.0.16.tgz",
       "integrity": "sha512-eRnCtTTtGZFpQCwhJiUOuxPQWRXVKYDn0b2PeHfXL6/Zi53SLAzAHfVhVWK2AryC/WH05kGfxhFIPvTF0SXQzg==",
-      "dev": true,
       "license": "MIT",
       "engines": {
         "node": ">= 4.9.1"
@@ -11160,31 +11139,31 @@
       }
     },
     "node_modules/pino": {
-      "version": "8.20.0",
-      "resolved": "https://registry.npmjs.org/pino/-/pino-8.20.0.tgz",
-      "integrity": "sha512-uhIfMj5TVp+WynVASaVEJFTncTUe4dHBq6CWplu/vBgvGHhvBvQfxz+vcOrnnBQdORH3izaGEurLfNlq3YxdFQ==",
+      "version": "8.21.0",
+      "resolved": "https://registry.npmjs.org/pino/-/pino-8.21.0.tgz",
+      "integrity": "sha512-ip4qdzjkAyDDZklUaZkcRFb2iA118H9SgRh8yzTkSQK8HilsOJF7rSY8HoW5+I0M46AZgX/pxbprf2vvzQCE0Q==",
       "license": "MIT",
       "dependencies": {
         "atomic-sleep": "^1.0.0",
         "fast-redact": "^3.1.1",
         "on-exit-leak-free": "^2.1.0",
-        "pino-abstract-transport": "^1.1.0",
+        "pino-abstract-transport": "^1.2.0",
         "pino-std-serializers": "^6.0.0",
         "process-warning": "^3.0.0",
         "quick-format-unescaped": "^4.0.3",
         "real-require": "^0.2.0",
         "safe-stable-stringify": "^2.3.1",
         "sonic-boom": "^3.7.0",
-        "thread-stream": "^2.0.0"
+        "thread-stream": "^2.6.0"
       },
       "bin": {
         "pino": "bin.js"
       }
     },
     "node_modules/pino-abstract-transport": {
-      "version": "1.1.0",
-      "resolved": "https://registry.npmjs.org/pino-abstract-transport/-/pino-abstract-transport-1.1.0.tgz",
-      "integrity": "sha512-lsleG3/2a/JIWUtf9Q5gUNErBqwIu1tUKTT3dUzaf5DySw9ra1wcqKjJjLX1VTY64Wk1eEOYsVGSaGfCK85ekA==",
+      "version": "1.2.0",
+      "resolved": "https://registry.npmjs.org/pino-abstract-transport/-/pino-abstract-transport-1.2.0.tgz",
+      "integrity": "sha512-Guhh8EZfPCfH+PMXAb6rKOjGQEoy0xlAIn+irODG5kgfYV+BQ0rGYYWTIel3P5mmyXqkYkPmdIkywsn6QKUR1Q==",
       "license": "MIT",
       "dependencies": {
         "readable-stream": "^4.0.0",
@@ -12693,9 +12672,9 @@
       }
     },
     "node_modules/thread-stream": {
-      "version": "2.3.0",
-      "resolved": "https://registry.npmjs.org/thread-stream/-/thread-stream-2.3.0.tgz",
-      "integrity": "sha512-kaDqm1DET9pp3NXwR8382WHbnpXnRkN9xGN9dQt3B2+dmXiW8X1SOwmFOxAErEQ47ObhZ96J6yhZNXuyCOL7KA==",
+      "version": "2.7.0",
+      "resolved": "https://registry.npmjs.org/thread-stream/-/thread-stream-2.7.0.tgz",
+      "integrity": "sha512-qQiRWsU/wvNolI6tbbCKd9iKaTnCXsTwVxhhKM6nctPdujTyztjlbUkUTUymidWcMnZ5pWR0ej4a0tjsW021vw==",
       "license": "MIT",
       "dependencies": {
         "real-require": "^0.2.0"
@@ -12914,9 +12893,9 @@
       }
     },
     "node_modules/ts-retry-promise": {
-      "version": "0.7.1",
-      "resolved": "https://registry.npmjs.org/ts-retry-promise/-/ts-retry-promise-0.7.1.tgz",
-      "integrity": "sha512-NhHOCZ2AQORvH42hOPO5UZxShlcuiRtm7P2jIq2L2RY3PBxw2mLnUsEdHrIslVBFya1v5aZmrR55lWkzo13LrQ==",
+      "version": "0.8.1",
+      "resolved": "https://registry.npmjs.org/ts-retry-promise/-/ts-retry-promise-0.8.1.tgz",
+      "integrity": "sha512-+AHPUmAhr5bSRRK5CurE9kNH8gZlEHnCgusZ0zy2bjfatUBDX0h6vGQjiT0YrGwSDwRZmU+bapeX6mj55FOPvg==",
       "license": "MIT",
       "engines": {
         "node": ">=6"
